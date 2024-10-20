@@ -51,29 +51,29 @@ Describe following commands and concepts:
 <li>date --help</li> Listaa Date pienohjelman ohjeet, miten tätä pienohjelmaa ajetaan, esimerkiksi jos haluaa päivämäärän näkyvän tietyssä muodossa. 
 <li>cd</li> Kyseinen pienohjelma mahdollistaa liikkumisen tietojärjestelmässä kansiosta toiseen, kirjoittamalla esimerkiksi <b>cd /etc/nginx</b> Pääsemme siirtymään Nginx-verkkopalvelimen tiedostoihin. 
 <li>cd -</li> Kyseisellä kommenolla pääsemme kätevästi hyppäämään tietojärjestelmän juuripolulle, eli / 
-<li>cd ..</li>
-<li>ls -lat</li>
-<li>ls -s aaaa*</li>
-<li>pwd</li>
-<li>chown</li>
-<li>chmod</li>
-<li>chgrp</li>
-<li>chmod 644 file</li>
-<li>chmod g+x myfile</li>
-<li>rm</li>
-<li>rm -r mydoc</li>
-<li>cp primary secondary</li>
-<li>mv file2 file1</li>
-<li>mkdir mydata</li>
-<li>rmdir mydata</li>
-<li>more, less</li>
-<li>file</li>
-<li>stat</li>
-<li>df</li>
-<li>ln</li>
-<li>which, whereis</li>
-<li>find</li>
-<li>touch</li>
-<li>touch mynewfile</li>
-<li>cp /tmp/test.txt ~/temp/</li>
+<li>cd ..</li> Kyseisellä komennolla pääsemme hyppäämään tiedostopolun mukaisesti yhden kansion taakseppäin. Eli jos olemme polulla /etc/nginx, niin cd .. komennoilla siirymme kansioon /etc/ 
+<li>ls -lat</li> Listaa aktiivisen kansionsisällä, eli missä juuri olemme kaikki kansiot, tiedostot ja näyttää samalla luku ja -kirjoitusoikeudet, sekä kansion/tiedoston omistajan ja ryhmän. Lisäksi muokkauspäivän.
+<li>ls -s aaaa*</li> Komento etsii ja listaa kaikki tiedostot joiden nimissä on aaaa
+<li>pwd</li> komento kertoo nykyisen sijantimme tietojärjestelmässä. Esim. /home/oamk
+<li>chown</li> Komento mahdollistaa tiedoston tai kansion omistajan ja/tai ryhmän asettamista, sekä vaihtoa. Esim. chown oamk:aomk /home/oamk/.aaaa
+<li>chmod</li> Tällä komennolla voimme määrittää kirjoitus- ja lukuoikeudet tiedostolle ja kansiolle, sekä tarvittaessa myös alikansioille ja tiedoistoille. esim chmod 777 -R /home/oamk/* asettaa kaikille tiedostoille ja kansioille täydet kirjoitus ja luku oikeudet.
+<li>chgrp</li> Tällä komennolla voimme vaihtaa/asettaa kansioille tai/ja tiedoistoille tietyn ryhmän. 
+<li>chmod 644 file</li> Asettaa tiedostolle nimellä file, kaikille käyttäjille lukuoikeuden ja omistajalle kirjoitusoikeuden, ilman suoritusoikeuksia. 
+<li>chmod g+x myfile</li> Antaa tietylle ryhmälle suoritusoikeudet myfile tiedostoon
+<li>rm</li> Komento poistoa varten. 
+<li>rm -r mydoc</li> Komento poistaa kansion mydoc
+<li>cp primary secondary</li>Kopiointi komento, cp lahde_mitakopioidaan minne_kopioidaan
+<li>mv file2 file1</li>Mv, eli ns. liikutus komento. Tässä tapauksessa on kuitenkin kyse file2 uudelleen nimeämisestä file1:ksi.
+<li>mkdir mydata</li> Komento luo kansion nimellä mydata
+<li>rmdir mydata</li> Komento tuhoaa/deletoi kansion nimellä mydata
+<li>more, less</li> More ja less ovat komentoja, jotka ovat tarkoitettu helpottamaa työskentelyä komentorivillä, kun tehtävänä on lukea tiedostoje, kuten logeja. More komento avaa tiedoston ja pilkkoo sen ns. sivuihin, jolloin välilyöntiä painamalla pystyy lukemaan tiedostoa kokonaa. Less on hieman kehittyneempi ja mahdollistaa liikkumisen nuolinäppäimillä eteen ja taaksepäin, sekä löytyy haku, joka toimii hakusanoilla. /avainsana etsii valitusta kohdasta eteenpäin ja ?avainsana valitusta kohdasta taaksepäin. 
+<li>file</li> auttaa tunnistamaan tiedoston tyypin, koon ja muodon. 
+<li>stat</li> Komento yksityiskohtaisempaan tiedoston näyttämiseen, kun halutaan katsoa tiedostoa, sen tyyppiä, kokoja, nimeä, tyyppiä, käyttöoikeuksia, tiedoston viimeisin käyttö tai muutospäivämäärä.
+<li>df</li>Komneto joka raportoi kuinka paljon levytilaa on käytettävissä. Pelkkä df listaa kaikki levyasemat, lohkot, kuten /dev, /run, /, /opt jne ja näyttää niiden varauksen ja vapaan tallennustilan biteissä. 
+<li>ln</li> Komento jolla voidaan luoda linkitys kahden tiedoston tai kansion välillä. Linkkejä voi olla kovia, sekä symbolisia. 
+<li>which, whereis</li>which ja whereis käytetään ohjelmien, sekä komentojen sijainnin selvittämiseen.  Which etsii komennon sijainin käyttäen PATH-ympäristömuuttujaa, kun taas whereis etsii ohjelman binääritiedostoa, manuaaleja, ja lähdekoodi tiedostoja. 
+<li>find</li> Hakukomento, jolla voi etsiä käyttöjärjestelmästä mitä vaan. Tällä komennolla voi tehdä hakurajauksia, nimellä hakuja, tyypillä hakuja, kokohakuja jne. Toisin sanoin Linux käyttäjän parasystävä. 
+<li>touch</li> Komentoa käytetään tyhjientiedostojen lumiseen, tai olemassa olevien tiedostojen aikaleimojen virkistämiseksi. 
+<li>touch mynewfile</li>Luo tyhjäntiedoston nimeltään mynewfile tai jos tiedosto on olemassa päivitää tämän aikaleiman. 
+<li>cp /tmp/test.txt ~/temp/</li> Komento kopioi tmp kansiosta test.txt tiedoston ja vie sen kirjautuneen käyttäjän kotikansioon, temp-kansioon. Jos kotikansion temp kansiota ei ole, niin komento epäonnistuu. 
 </ul>
