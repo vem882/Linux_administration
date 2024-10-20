@@ -77,3 +77,28 @@ Describe following commands and concepts:
 <li>touch mynewfile</li>Luo tyhjäntiedoston nimeltään mynewfile tai jos tiedosto on olemassa päivitää tämän aikaleiman. 
 <li>cp /tmp/test.txt ~/temp/</li> Komento kopioi tmp kansiosta test.txt tiedoston ja vie sen kirjautuneen käyttäjän kotikansioon, temp-kansioon. Jos kotikansion temp kansiota ei ole, niin komento epäonnistuu. 
 </ul>
+
+
+
+<li>Question 3:</li>
+What is the difference between Linux kernel and GNU/Linux distribution?
+
+<li>Answer 3:</li>
+Linux kernel on käyttöjärjestelmän ydinosa, joka hallitsee laitteiston ja ohjelmiston välistä kommunikaatiota. Vastaa resurseista, kuten muistista, prosessorista ja laitteiston hallinnasta ja ohjeuksesta. 
+
+GNU/Linux distribution, eli GNU/linux jakelu. On kokonaisuus, eli käyttöjärjestelmä, joka sisältää kernelin, eli ytimen ja nipun ohjelmia, jotka yhdessä muodostavat kokonaisuuden, eli käyttöjärjestelmän. Näitä voi olla tuhansia erillaisia, kuten kaikille tuttu Ubuntu käyttöjärjestelmä. Jokainen voi käytönnössä luoda oman käyttöjärjestelmän, joka sisältää itselleen tarvittavia ohjelmia ja työkaluja ja hyödyntää olemassa olevaa Kernel ydintä. 
+
+
+<li>Question 4:</li>
+Name some very common Linux distributions
+
+<li>Answer 4:</li>
+Tunnetuimat ovat: Ubuntu, Debian, Fedora, CentOS , Arch linux. 
+
+<li>Question 5:</li>
+What is GPLv2/v3 license? And BSD style license?
+
+<li>Answer 5:</li>
+GPLv2 - lisenssi Julkaistu vuonna 1991, mahdollistaa ohjelmiston vapaan käytön, muokkauksen ja jaon. Edellyttää, että, kaikki mitä tehdään on julkaisutu aluperuin GLPv2- lisenssillä myös julkaistaan jatkossa samalla lisenssillä, eli lisenssiä ei voi lennosta muutaa. Lähdekoodi on pidettävä matkalla mukana. 
+GPLv3 - lisenssi julkaistu vuonna 2007, Sisältää hieman selkeämmän ehdot verrattuna aikasempaan versioon. Parantaa oikeuksia ja antaa enemmän suojaa ohjelmiston vapaalle jaolle. Kuka tahansa voi kopioida, muokata, käyttää ja käyttää omissa jakeluissa.  
+BSD tyylinen lisenssi
