@@ -1,4 +1,4 @@
-# Linux_administration
+# Linux administration
 <details>
   <summary>Sisällysluettelo Tehtävät </summary>
   <ol>
@@ -11,3 +11,4 @@
     <li><a href="/Week7.md">Week7</a></li>
   </ol>
 </details>
+
