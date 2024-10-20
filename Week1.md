@@ -1,6 +1,23 @@
 ## Week 1
+<details>
+  <summary>Sisällysluettelo Viikko 1 </summary>
+  <ol>
+    <li><a href="#Question 1:">Question 1</a></li>
+    <li><a href="#Answer 1:">Answer 1:</a></li>
+    <li><a href="#Question 2:">Question 2</a></li>
+    <li><a href="#Answer 2:">Answer 2:</a></li>
+        <li><a href="#Question 3:">Question 3</a></li>
+    <li><a href="#Answer 3:">Answer 3:</a></li>
+        <li><a href="#Question 4:">Question 4</a></li>
+    <li><a href="#Answer 4:">Answer 4:</a></li>
+        <li><a href="#Question 5:">Question 5</a></li>
+    <li><a href="#Answer 5:">Answer 5:</a></li>
+        <li><a href="#Question 6:">Question 6</a></li>
+    <li><a href="#Answer 6:">Answer 6:</a></li>
+  </ol>
+</details>
 
-<li>Question 1:</li>
+## Question 1:
 Describe following commands and concepts: 
 <ul>
 <li>man, apropos</li>
@@ -39,7 +56,7 @@ Describe following commands and concepts:
 </ul>
 
 
-<li>Answer 1:</li>
+## Answer 1:
 <ul>
 <li>man, apropos</li> <b>apropos</b> - etsii manuaaleista  avainsanalla liittyviä tiedostoja ja viittauksia. <br>
 <b>man</b> - Avaa ohjelmisto tai pakettiin liittyvän dokumentaation, jossa on kerrottu tietyn ohjelman taikka paketin käyttötarkoitus, toiminnallisuudet, kommennot, riippuvuudet, optiot, sekä lyhyt kuvaus. 
@@ -80,7 +97,7 @@ Describe following commands and concepts:
 
 
 
-<li>Question 3:</li>
+## Question 3:
 What is the difference between Linux kernel and GNU/Linux distribution?
 
 <li>Answer 3:</li>
@@ -89,13 +106,13 @@ Linux kernel on käyttöjärjestelmän ydinosa, joka hallitsee laitteiston ja oh
 GNU/Linux distribution, eli GNU/linux jakelu. On kokonaisuus, eli käyttöjärjestelmä, joka sisältää kernelin, eli ytimen ja nipun ohjelmia, jotka yhdessä muodostavat kokonaisuuden, eli käyttöjärjestelmän. Näitä voi olla tuhansia erillaisia, kuten kaikille tuttu Ubuntu käyttöjärjestelmä. Jokainen voi käytönnössä luoda oman käyttöjärjestelmän, joka sisältää itselleen tarvittavia ohjelmia ja työkaluja ja hyödyntää olemassa olevaa Kernel ydintä. 
 
 
-<li>Question 4:</li>
+## Question 4:
 Name some very common Linux distributions
 
 <li>Answer 4:</li>
 Tunnetuimat ovat: Ubuntu, Debian, Fedora, CentOS , Arch linux. 
 
-<li>Question 5:</li>
+## Question 5:
 What is GPLv2/v3 license? And BSD style license?
 
 <li>Answer 5:</li>
