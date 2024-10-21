@@ -198,3 +198,12 @@ Shellin tehtävät:
 What are case sensitive file names?
 
 <li>Answer 7:</li>
+<b>Case sensitive</b> -tiedostonimet tarkoittavat, että tiedostojärjestelmä erottaa isot ja pienet kirjaimet toisistaan tiedostonimissä.
+Esimerkiksi "tiedosto.txt" ja "Tiedosto.txt" viittaavat kahteen eri tiedostoon. 
+Käyttöjärjestelmät, jotka ovat <b>Case sensitive</b> kohtelevat Suuria ja pieniä kirjaimia eri merkkeinä. 
+
+
+## Question 7:
+Describe common purpose of files and directories in “/home”, “/etc”, “/usr/bin” and “/var”
+
+<li>Answer 7:</li>
