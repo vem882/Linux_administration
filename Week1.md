@@ -116,6 +116,41 @@ Tunnetuimat ovat: Ubuntu, Debian, Fedora, CentOS , Arch linux.
 What is GPLv2/v3 license? And BSD style license?
 
 <li>Answer 5:</li>
-GPLv2 - lisenssi Julkaistu vuonna 1991, mahdollistaa ohjelmiston vapaan käytön, muokkauksen ja jaon. Edellyttää, että, kaikki mitä tehdään on julkaisutu aluperuin GLPv2- lisenssillä myös julkaistaan jatkossa samalla lisenssillä, eli lisenssiä ei voi lennosta muutaa. Lähdekoodi on pidettävä matkalla mukana. 
-GPLv3 - lisenssi julkaistu vuonna 2007, Sisältää hieman selkeämmän ehdot verrattuna aikasempaan versioon. Parantaa oikeuksia ja antaa enemmän suojaa ohjelmiston vapaalle jaolle. Kuka tahansa voi kopioida, muokata, käyttää ja käyttää omissa jakeluissa.  
-BSD tyylinen lisenssi
+GPLv2 -  (GNU General Public License ) lisenssi  on hyvin tunnettu ja yleisesti käytettävä vapaan lähdekoodin lisenssi.  Joka noudattaa Copyleft(tekijänoikeuskonsepti) lisenssiä.
+Copyleft takaa ohjelmiston, taiteen, tai muun luovan työn vapaan käytön, muokkaamisen ja jakamisen, mutta sillä on ehtoja jakelulle. Samat ehdot pitää säilyttää, mitkä olivat alkuperäisessä tuotoksessa, eli vaikka lainaisit ja muokkaisit sitä, niin tulee sinun muokkaamasi tuotoksessa olla käytössä samat GPL- lisenssit ja Copyleft käyttöoikeudet vapaaseen käyttöön. 
+•	GPL- sallii teoksen levityksen ja muokkaamisen, kunhan seuraavat ehdot täyttyvät:
+- Lisenssiä ei saa muuttaa tai poistaa
+•	Muokkauksista pitää lisätä huomio
+•	Ohjelman tulee sisältää tieto lisenssistä
+•	Lähdekoodi pitää tehdä saataville kaikille, joille ohjelma on levitetty
+•	Johdannaisteokset tulee lisensoida samalla lisenssillä
+GPLv3 – lisenssi on uudistettu versio 2 versiosta, mutta uudemmassa versiossa lisenssin ehdot on kirjoitettu lakiteknistä kieltä käyttäen , jotta lisenssiä voisi käyttää kansainvälisesti, sekä yhteensovittaa muiden lisenssien kanssa. 3 versio antaa lisäsuojaa suljettuja järjestelmiä ja patentteja vastaan. 
+BSD- lisenssi eli vapaan lähdekoodin lisenssi poikkeaa GPL-lisenssistä siten, että antaa vapauden lisenssin vaihdoille, eli ei käytä Copyleft-lisenssiä ja mahdollistaa muokatun tuotoksen uudelleen lisensioinnin.
+Lähde(Luettu 21.10.24): https://www.sofokus.com/fi/blogi/avoin-lahdekoodi/
+Lähde Luettu 21.10.24):  https://www.gnu.org/licenses/gpl-3.0.html
+
+
+
+
+
+## Question 6:
+What is (operating system) shell?
+
+<li>Answer 6:</li>
+Shell on käyttöjärjestelmän (operating system) tarjoama ohjelma, joka toimii rajapintana käyttäjän ja käyttöjärjestelmän ytimessä toimivien palveluiden välillä. Se ottaa vastaan käyttäjän komennot, käsittelee ne ja välittää ne käyttöjärjestelmälle suoritettaviksi. Shell voi olla joko tekstipohjainen tai graafinen.
+ 
+Tekstipohjainen Shell, eli komentorivipohjainen esiintyy esimerkiksi Linux ja macOS komentoriveillä.
+Linuxissa, sekä macOS:ssä käytetään Bashia (Bourne Again Shell) ja Windowsissa Powershelliä.
+Tällä voidaan suorittaa komentoja, skriptejä ja hallinnoida järjestelmää käyttäen yksinkertaisia komentoja komentoriviä hyödyntäen.
+
+Graafinen Shell (Graphical User Interface, eli GUI)
+Toimii käyttöjärjestelmän graafisen ympäristön kautta, jossa käyttäjä voi kuvakkeita ja valikkoa painamalla käynnistää sovelluksia.
+Windowsin käytättäjille tutumpi on Exploler.exe , joka vastaa graafisen rajapinnan tiedostojen hallinnan  ja ohjelmien avaamisesta.
+
+Shellin tehtävät: 
+- Komentojen käsittely, skriptaus, käyttöjärjestelmän hallinta. 
+
+## Question 7:
+What are case sensitive file names?
+
+<li>Answer 7:</li>
