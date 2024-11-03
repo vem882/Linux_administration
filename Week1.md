@@ -18,7 +18,7 @@
   </ol>
 </details>
 
-## Question 1
+## Question 2
 
 Describe following commands and concepts:
 <ul>
@@ -57,7 +57,7 @@ Describe following commands and concepts:
 <li>cp /tmp/test.txt ~/temp/</li>
 </ul>
 
-## Answer 1
+## Answer 2
 
 <ul>
 <li>man, apropos</li> <b>apropos</b> - etsii manuaaleista  avainsanalla liittyviä tiedostoja ja viittauksia. <br>
@@ -202,11 +202,11 @@ What are case sensitive file names?
 Esimerkiksi "tiedosto.txt" ja "Tiedosto.txt" viittaavat kahteen eri tiedostoon.
 Käyttöjärjestelmät, jotka ovat <b>Case sensitive</b> kohtelevat Suuria ja pieniä kirjaimia eri merkkeinä.
 
-## Question 7
+## Question 8
 
 Describe common purpose of files and directories in “/home”, “/etc”, “/usr/bin” and “/var”
 
-<li>Answer 7:</li>
+<li>Answer 8:</li>
 <b>/home </b> - Kansiopolussa sijaitsevat Käyttöjärjestelmään luotujen käyttäjien kotihakemistot. Jokaisella käyttäjällä on oletuksena oma alihakemisto, johon käyttäjät voi tallentaa omia tiedostoja. Esimerkiksi <b>/home/juustonaksu</b>
 
 <b>/etc</b> kansio polussa sijaitsee järjestelmän ja asennettujen sovelluksien/pakettien määritys ja konfiguraatio asetukset. 
@@ -220,8 +220,141 @@ Kansiossa /var/run löytyy käynissä olevien ohjelmien PID (prosessin tunnus), 
 /var/backup kansiopolussa löytyy yleenssä järjestelmän tekemiä varmuuskopioita, erillaisista asennettuista paketeista. 
 
 
-<li>Question 8:</li>
+<li>Question 9:</li>
 What is shell PATH? What is the difference between absolute and relative path?
+
+<li>Answer 9:</li>
+<b>Absoluuttinen polku: </b> Absoluuttinen polku antaa tiedoston tai hakemiston täyden osoitteen alkaen juurihakemistosta (/). Se määrittää tiedoston tai hakemiston sijainnin riippumatta nykyisestä työhakemistosta. Esimerkiksi /home/oamk/x-files/repliikit.txt on absoluuttinen polku.
+
+<b>Suhteellinen polku: </b> Suhteellinen polku määrittää tiedoston tai hakemiston sijainnin suhteessa nykyiseen työhakemistoon. Se ei ala juurihakemistosta, vaan nykyisestä hakemistosta. Esimerkiksi, jos nykyinen hakemistosi on /home/oamk , suhteellinen polku tiedostoon file.txt hakemistossa documents olisi x-files/repliikit.txt.
+
+<li>Question 10:</li>
+What is the purpose of tilde character (~) for most Linux shells. For example ls ~/
+
+<li>Answer 10:</li>
+Linux-kuorissa tildemerkki (~) toimii lyhenteenä, joka viittaa käyttäjän kotihakemistoon. Tämä helpottaa kotihakemiston ja muiden käyttäjien kotihakemistojen käsittelyä ilman koko polun kirjoittamista.
+Esimerkiksi komento ls ~/ nykyisen käyttäjän kotihakemiston sisällön. 
+
+Tilda merkkiä, voi myös hyödyntää nykyisen, sekä edellisen työhakemistoon. 
+
+Esimerkiksi näin: ~+ viittaa työhakemistoon, joka vastaa PWD-muuttujaa.
+
+Kun ~- viittaa edellisen työhakemistoon vastaten OLDPWD-muuttujaa.
+
+
+
+<li>Question 11:</li>
+How do you recognise a hidden file in any common Unix/Linux file systems?
+
+<li>Answer 11:</li>
+Unix- ja Linux-tietojärjestelmissä piilotettu tiedostot, sekä hakemistot tunnistaa siitä, että niiden nimi alkaa pisteellä.
+Esimerkiksi .bashrc  on piilotettu, jos komentoriviltä syöttää komennon ls kotikansiossa /home/omak, mutta jos syötämme komentoriviin komennon ls -a, niin tämä näyttää meille kotikansiossa olevat myös piilotetut tiedostot ja kansiot. 
+Piilotettu kansiot ovat muodoltaan .kansionnimi 
+
+
+<li>Question 12:</li>
+What is the meaning of “piping data between commands”?
+
+<li>Answer 12:</li>
+Unix-tyyppisissä käyttöjärjestelmissä putkittaminen tarkoittaa menetelmää, jossa yhden komennon tuloste ohjataan suoraan toisen komennon syötteeksi. Tämä saavutetaan käyttämällä putkioperaattoria (|). Putkittaminen mahdollistaa yksinkertaisten komentojen yhdistämisen monimutkaisiksi tehtäviksi tehokkaasti.
+
+Esimerkiksi analysoidaan ssh-palvelimen lokeja tiedostosta /var/log/auth.log ja selvetään mistä IP-osoitteista on yritetty kirjautua väärällä salasanalla:
+
+grep "Failed password" /var/log/auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr
+
+-	grep "Failed password" /var/log/auth.log etsii kaikki rivit, joissa esiintyy teksti "Failed password", eli epäonnistuneet kirjautumisyritykset.
+-	awk '{print $(NF-3)}' tulostaa jokaisen rivin kolmanneksi viimeisen kentän, joka on epäonnistuneen kirjautumisyrityksen IP-osoite.
+-	sort lajittelee IP-osoitteet aakkosjärjestykseen.
+-	uniq -c laskee, kuinka monta kertaa kukin IP-osoite esiintyy.
+-	sort -nr lajittelee tulokset numeerisesti laskevassa järjestyksessä, jolloin eniten esiintyneet IP-osoitteet näkyvät ensimmäisinä.
+
+
+
+<li>Question 13:</li>
+What are seti-uid (suid) and set-gid (sgid) bits for file permissions?
+
+<li>Answer 13:</li>
+ **Set User ID (SUID)**  ja **Set Group ID (SGID)** ovat erityisiä tiedostojen käyttöoikeusbittejä, jotka muuttavat oletusarvonsa suorituskäyttäytymisen mukaan.
+**Set User ID (SUID):**
+Kun **SUID**-bitti on asetettu suoritettavalle tiedostolle, käyttäjät voivat suorittaa tiedoston sen omistajan oikeuksilla riippumatta omista käyttöoikeuksistaan. Tämä on hyödyllistä ohjelmille, jotka vaativat korkeampia oikeuksia tiettyjen toimintojen suorittamiseen.
+Esimerkki:
+passwd-komento, jota käytetään käyttäjien salasanojen vaihtamiseen, on asetettu SUID-bittillä. Tämä mahdollistaa tavallisille käyttäjille omien salasanojensa vaihtamisen, vaikka komento muokkaa järjestelmätiedostoja, joihin normaalisti vain root-käyttäjällä(pääkäyttäjällä) on kirjoitusoikeus.
+
+Set Group ID (SGID):
+SGID-bitti toimii eri tavoin riippuen siitä, onko se asetettu tiedostolle vai hakemistolle.
+Tiedostoissa käyttäjä pystyy suorittamaan tiedoston, SGID-ryhmään asetetuilla oikeuksilla, vaikka käyttäjän oman oikeudet ei alun perin riittäisi tiedoston suorittamiseen. Eli jos käyttäjä kuuluu ryhmään, joka on asetettu tiedostolle, niin hänellä on saman oikeudet.
+Kansioissa logiikka on muuten sama, mutta asettamalla kansiolle tietyn ryhmän, sama sääntö välittyy uusille kansion sillä tapahtuville muutoksille, eli jos luodaan kansio, niin kansio on tällöin saman ryhmän oikeuksien alla. 
+
+
+
+<li>Question 14:</li>
+What is a “sticky-bit”?
+
+<li>Answer 14:</li>
+sticky bit – on käyttöoikeus, joka asetetaan tietyille hakemistoille rajoittamaan tiedostojen muokkausta, uudelleen nimeämistä tai poistamista, kyseisen kansion sisällä.
+
+Sticky bit- oikeudet voi asettaa kansiolle vain tiedoston omistaja, hakemiston omistaja tai Root (järjestelmävalvooja). 
+
+Tätä käytetään mm. /tmp-hakemistossa joka on yleisesti kirjoitettavissa ja jota kaikki käyttäjät käyttävät väliaikaisten tiedostojen tallentamiseen. Asettamalla sticky bit /tmp-hakemistoon varmistetaan, että käyttäjät eivät voi poistaa tai nimetä uudelleen tiedostoja, joita he eivät omista, vaikka heillä olisi kirjoitusoikeudet hakemistoon.
+
+Esimerkkejä Sticky bitistä: 
+
+**chmod +t /polku/hakemistoon**
+
+Vaihtoehtoisesti voi käyttää myös: 
+
+**chmod 1777 /polku/hakemistoon**
+Chmodin ensimmäinen luku 1, edustaa Sticky bittiä ja 777 asettaa luku-, kirjoitus- ja suoritusoikeudet kaikille käyttäjille.
+
+ls -ld komennolla voidaan tarkistaa onko hakemistolle asetettu Sticky Bitti.
+
+Esimerkiksi: ls -ld /polku/hakemistoon
+
+Jos sticky bit on asetettu, hakemiston käyttöoikeuksissa näkyy t lopussa, esimerkiksi drwxrwxrw<b>t</b>.
+
+
+
+
+<li>Question 15:</li>
+Use manual pages and explain what will command “uname -a” do?
+
+<li>Answer 15:</li>
+Komento uname -a näyttää tiedot järjestelmästä yhdistämällä useita yksityiskohtia yhteen tulosteeseen.
+
+uname-komennon manuaalisivun mukaan -a- tai --all-valitsin tulostaa kaikki saatavilla olevat järjestelmätiedot seuraavassa järjestyksessä:
+
+•	Käyttöjärjestelmän nimi (-s): Käyttöjärjestelmän ytimen nimi.
+
+•	Solmun nimi (-n): Koneen verkkonimi (hostname).
+
+•	Ytimen julkaisuversio (-r): Ytimen julkaisuversio.
+
+•	Ytimen versio (-v): Ytimen versio.
+
+•	Koneen laitteiston nimi (-m): Koneen laitteistoarkkitehtuuri.
+
+•	Prosessorityyppi (-p): Prosessorin tyyppi.
+
+•	Laitteistoalusta (-i): Laitteistoalusta.
+
+•	Käyttöjärjestelmä (-o): Käyttöjärjestelmän nimi.
+
+Jos järjestelmä ei pysty määrittämään tiettyjä kenttiä, kuten prosessorintyyppiä, tulee kyseisille kohdille teksti ”unknown”. 
+
+
+<li>Question 16:</li>
+Use manual pages and explain what will command “wc -l” do?
+
+<li>Answer 16:</li>
+wc (eng. Print newline, word, and byte counts for each file, eli lyhenne sanoista word count) komento, joka laskee tiedostojen tai standardisyötteen rivien, sanojen ja merkkien määrän. Kun wc-komentoa käytetään -l-valitsimen kanssa, se laskee ainoastaan rivien määrän. wc-komennon manuaalisivun mukaan -l-valitsin tulostaa rivien lukumäärän.
+
+Esimerkiksi, jos halutaan laskea tiedoston sisällä olevien rivien määrä, niin tämä onnistuu seuraavalla komennolla: wc – l esimerkki_tiedosto.txt
+
+Saadaan vastaukseksi 85 esimerkki_tiedosto.txt 
+
+
+<li>Question 17:</li>
+Linux file handling intro: 
 
 <li>Answer 8:</li>
 Rodem lipsum...
