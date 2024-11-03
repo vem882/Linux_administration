@@ -356,6 +356,20 @@ Saadaan vastaukseksi 85 esimerkki_tiedosto.txt
 <li>Question 17:</li>
 Linux file handling intro: 
 
-<li>Answer 8:</li>
-Rodem lipsum...
+    List five largest files in /usr/lib -directory (Tip: Use ls command with proper command line options)
+    What is the group for /bin/ls file?
+    How do you change file or directory owner and group?
+    How do you change file permissions so that file user has all access rights (read, write and execute), group and others have none?
+    How do you change file permissions so that file user has read and write access (no execute), group and others have only read access?
+    How do you change file permissions so that file user, group and others have only read and execute (no write) access?
+    Describe following file permissions and ownership:
+    drwxr-x--- 2 teemu root 4096 Jul 2 2002 webalizer
+    Create directory “exercise1” under you home directory
+    Create empty file (length 0 bytes) “qwerty.txt” to that directory
+    Rename directory “exercise1” to “exer2”?
+    Change file qwerty.txt file permissions so that only you (the owner) has a read access to it and nothing else
+    Create symbolic link to you home directory “this_is_my_link” and make it point to the exer2-directory
+    How can you find out your current directory location and PATH? How far (in directories) are you from the file system root (/)?
+
+
 
